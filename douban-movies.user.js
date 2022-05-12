@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         豆瓣电影在线观看
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  提供在线观看豆瓣电影的链接 
 // @author       anc95
 // @match        https://movie.douban.com/subject/*
@@ -26,7 +26,7 @@ function invirant(condition, message) {
   }
   
   function getMovieList(movieName) {
-    const url = 'https://api.jackeriss.com/api/v1/search/?text=' + movieName + '&type=0&from=0&size=10';
+    const url = 'https://api2.jackeriss.com/api/v1/search/?text=' + movieName + '&type=0&from=0&size=10';
     return fetch(url)
       .then(function(res) {
         return res.json();
